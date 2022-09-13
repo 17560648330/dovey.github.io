@@ -93,79 +93,48 @@
     
     <div class="e-content article-entry" itemprop="articleBody">
       
-        <h2 id="9-8在线总结及答疑"><a href="#9-8在线总结及答疑" class="headerlink" title="9.8在线总结及答疑"></a>9.8在线总结及答疑</h2><p>1.路径</p>
-<p>path 能找到，</p>
-<p>相对路径  </p>
-<p>当前路径</p>
-<p>![image-20220908083506604](C:\Users\Dovey’s PC\AppData\Roaming\Typora\typora-user-images\image-20220908083506604.png)</p>
-<p>2.VM</p>
-<p>image镜像</p>
-<p>3.命令格式</p>
-<h4 id="命令总结"><a href="#命令总结" class="headerlink" title="命令总结"></a>命令总结</h4><h5 id="目录类命令的使用"><a href="#目录类命令的使用" class="headerlink" title="目录类命令的使用"></a>目录类命令的使用</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">cd  切换目录</span><br><span class="line">cd /usr/share</span><br><span class="line">cd test/aa</span><br><span class="line">pwd  查看当前目录</span><br><span class="line">ls [选项] [参数] 查看参数所包含的子文件，如果参数是文件，则查看文件本身</span><br><span class="line">-l  以文件长格式进行查看</span><br><span class="line">-a  查看所有文件</span><br><span class="line">-d  查看目录本身</span><br><span class="line">-h  以人类易读形式列出</span><br><span class="line">ls  -lh   /root  </span><br><span class="line">mkdir  创建目录</span><br><span class="line">-p 迭代创建</span><br><span class="line">mkdir [-p]   /path/path1/path2</span><br></pre></td></tr></table></figure>
+        <iframe frameborder="no" border="0" marginwidth="0" marginheight="0" width=330 height=86 src="//music.163.com/outchain/player?type=2&id=375328&auto=1&height=66"></iframe>
 
-<h5 id="文件类命令使用"><a href="#文件类命令使用" class="headerlink" title="文件类命令使用"></a>文件类命令使用</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line">touch  在指定路径创建文件，如果文件已存在则刷新文件访问时间。</span><br><span class="line">touch /aa   </span><br><span class="line">cp 复制文件到某个位置</span><br><span class="line">cp -r [源文件] [目的路径]    源文件可以是多个，用空格分隔开即可</span><br><span class="line">mv 移动文件到某个位置</span><br><span class="line">mv [源文件] [目的路径]</span><br><span class="line">rm 删除文件</span><br><span class="line">-f 删除无需二次确认</span><br><span class="line">-r 删除的是目录   </span><br><span class="line">rm  -rf   path    删除对象是路径中的最后一个</span><br><span class="line">find   查找文件</span><br><span class="line">find   查找范围   查找条件</span><br><span class="line">-user</span><br><span class="line">-type</span><br><span class="line">-name</span><br><span class="line">-exec   将被查找到的文件通过特殊命令调用</span><br><span class="line">……</span><br><span class="line"></span><br><span class="line">* 代表n位字符</span><br><span class="line">? 代表1位字符</span><br></pre></td></tr></table></figure>
-
-<h5 id="文件内容命令"><a href="#文件内容命令" class="headerlink" title="文件内容命令"></a>文件内容命令</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">cat 查看文件内容</span><br><span class="line">cat 文件路径</span><br><span class="line">less  以手册形式查看文件内容</span><br><span class="line">more  以手册形式打印文件内容</span><br><span class="line">tail  查看文件的末尾</span><br><span class="line">-f 查看文件内容更新</span><br><span class="line">head  查看文件开头</span><br><span class="line">grep  查找文件内容</span><br><span class="line">-i</span><br><span class="line">-v</span><br><span class="line">-E    支持正则化当中的判断语句  |  或</span><br></pre></td></tr></table></figure>
-
-<p>补充点</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">管道：将管道前命令的输出传递给管道后用   符号是|</span><br><span class="line">ls /  |  grep   etc            输出分两个标准输出  错误输出 输出可以理解为特殊形式的文件</span><br></pre></td></tr></table></figure>
-
-<h5 id="归档及压缩"><a href="#归档及压缩" class="headerlink" title="归档及压缩"></a>归档及压缩</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">tar</span><br><span class="line">-c  创建</span><br><span class="line">-x  释放</span><br><span class="line">-t  查看</span><br><span class="line">-f  指定归档文件   选项后直接跟选项参数：归档文件</span><br><span class="line">-v  显示进度</span><br><span class="line"></span><br><span class="line">-z   gzip压缩   速度最快</span><br><span class="line">-j   bzip压缩</span><br><span class="line">-J   xzip压缩    空间占用最少，压缩比最高   </span><br></pre></td></tr></table></figure>
-
-<h5 id="vim编辑器"><a href="#vim编辑器" class="headerlink" title="vim编辑器"></a>vim编辑器</h5><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">D(vim file)--&gt;B</span><br><span class="line">A(编辑模式)--Esc键--&gt;B(命令模式)</span><br><span class="line">B--Esc键--&gt;C(末行模式)</span><br><span class="line">B--iao等按键--&gt;A</span><br><span class="line">B--:键--&gt;C</span><br></pre></td></tr></table></figure>
-
-<h4 id="用户和组管理"><a href="#用户和组管理" class="headerlink" title="用户和组管理"></a>用户和组管理</h4><p>linux基于用户身份对资源进行访问控制    permission  denied  ：权限被拒绝</p>
-<p>可登录的用户account</p>
-<p>root  0 普通用户   uid   root为0   普通用户1000+</p>
-<p>不能登陆的：程序与程序认证的</p>
-<p>&#x2F;etc&#x2F;passwd   用户账户信息文件</p>
-<p>用户名：用户密码占位符：UID：GID：用户的说明：用户家目录：用户登录shell</p>
-<p>&#x2F;etc&#x2F;shadow 用户密码文件、影子文件</p>
-<p>用户名：密码字串：密码策略</p>
-<p>密码字串：$加密方式$salt$加密的密码</p>
-<p>sha512加密 </p>
-<p>&#x2F;etc&#x2F;group 组账号文件</p>
-<p>组名：占位：GID：附加组内用户</p>
-<p>用户与组的关联：无关组、基本组、附加组。</p>
-<h5 id="用户和组的管理"><a href="#用户和组的管理" class="headerlink" title="用户和组的管理"></a>用户和组的管理</h5><figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br></pre></td><td class="code"><pre><span class="line">useradd  添加用户</span><br><span class="line">useradd  [选项 选项参数]  用户 </span><br><span class="line">-u  指定uid</span><br><span class="line">-d  指定用户家目录</span><br><span class="line">-s  指定用户登录shell</span><br><span class="line">-s  /sbin/nologin</span><br><span class="line">-s  /bin/bash</span><br><span class="line">-g  指定用户基本组</span><br><span class="line">-G  指定用户附加组</span><br><span class="line">-M  创建的用户无家目录</span><br><span class="line">-N  创建的用户无基本组。</span><br><span class="line">usermod  修改已有用户的身份的</span><br><span class="line">-u  指定uid</span><br><span class="line">-d  指定用户家目录</span><br><span class="line">-s  指定用户登录shell</span><br><span class="line">-g  指定用户基本组</span><br><span class="line">-G  指定用户附加组</span><br><span class="line">userdel 删除用户     #创建用户的时候默认创建用户家目录、创建用户邮箱文件</span><br><span class="line">userdel -r  用户</span><br><span class="line">passwd  修改用户密码</span><br><span class="line">chage  用户密码策略管理</span><br><span class="line">chage   -l stu   查看用户stu的密码策略</span><br><span class="line">-m   密码最短有效天数</span><br><span class="line">-M   密码最长有效天数</span><br><span class="line">-W   密码过期多少天之前告警</span><br></pre></td></tr></table></figure>
-
-<p>![image-20220908105826612](C:\Users\Dovey’s PC\AppData\Roaming\Typora\typora-user-images\image-20220908105826612.png)组管理</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">groupadd 添加用户</span><br><span class="line">-g  指定GID</span><br><span class="line">gpasswd 组成员管理</span><br><span class="line">-a 把用户加入组</span><br><span class="line">gpasswd   -a  user  group</span><br><span class="line">-d 把用户从组内移除</span><br><span class="line">gpasswd   -d  user  group</span><br><span class="line">groupdel 删除组</span><br><span class="line">groupdel  group01</span><br></pre></td></tr></table></figure>
-
-<p>补充：</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">su   用于切换用户</span><br><span class="line">root切任意用户不需要密码</span><br><span class="line">普通用户切任意用户默认需要密码</span><br><span class="line">su  和  su  - </span><br><span class="line">su的切换不更改环境</span><br><span class="line">su - 的切换更改环境</span><br><span class="line">w    查看当前登录的用户</span><br><span class="line">id  用户  判断用户是否存在，查看用户的id等</span><br></pre></td></tr></table></figure>
-
-
-
-<h5 id="权限的管理"><a href="#权限的管理" class="headerlink" title="权限的管理"></a>权限的管理</h5><ul>
-<li><p>访问权限</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">r  读权限   w  写权限（对于文件可以做出实质上的修改，对于目录意味着可以对于目录内文件删除、移动、修改）   x 执行权限</span><br><span class="line">目录可以包含文件，文件的权限不仅要看自己的，还要看目录的</span><br><span class="line">rwx  r-x</span><br><span class="line"></span><br></pre></td></tr></table></figure>
-
-
-</li>
-<li><p>所属权限</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">属主  属组</span><br><span class="line">用户创建的文件默认归属于这个用户，属主为这个用户，属组为这个用户。</span><br><span class="line">用户是文件的属主</span><br><span class="line">用户是文件属组内的用户</span><br><span class="line">用户既不是属组也不是属主，是其他用户</span><br></pre></td></tr></table></figure>
-
-<p>权限的修改</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">chmod  更改用户对文件的访问权限。</span><br><span class="line">chmod u+r,g-w,o=rw-  aa</span><br><span class="line">chmod nnn  aa   三位八进制数字</span><br><span class="line">chmod nnnn aa  四位八进制数字  后三位还是上边的权限，第一位suid为4  sgid为2，sticky为1,</span><br><span class="line">chown user  aa   将aa文件的属主改为user</span><br><span class="line">chown :group aa  将aa文件的属组改为group</span><br><span class="line">chown user:group aa </span><br></pre></td></tr></table></figure>
-
-<p>特殊权限</p>
-<figure class="highlight shell"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">set位权限： suid  sgid</span><br><span class="line">设置组id  sgid：通常设置在目录上看，设置以后在对应目录中创建的文件属组是该目录的属组。符号表示位s，设置以后属组位置的x权限标识变为s。</span><br><span class="line">chmod g+s  /dir</span><br><span class="line"></span><br></pre></td></tr></table></figure></li>
-</ul>
-<p>1.创建用户natasha属于manager组</p>
-<p>创建用户harry属于manager组</p>
-<p>创建用户john不属于manager组，且无法登陆。</p>
-<p>三者密码均为default。</p>
-<p>2.创建一个共享目录&#x2F;home&#x2F;manager，该目录对于manager组用户可以由读取和执行权限。</p>
-<p>对于harry用户，可以有读取写入和执行权限。其他用户无任何权限。在目录内创建的文件，属组会自动变成manager组。</p>
-<p>任务提交命令</p>
-<p>tail   -3  &#x2F;etc&#x2F;passwd</p>
-<p>ls -ld &#x2F;home&#x2F;manager</p>
+<p>小情歌 (Little Love Song)</p>
+<p>词：吴青峰</p>
+<p>曲：吴青峰</p>
+<p>这是一首简单的小情歌</p>
+<p>唱着人们心头的曲折</p>
+<p>我想我很快乐 当有你的温热</p>
+<p>脚边的空气转了</p>
+<p>这是一首简单的小情歌</p>
+<p>唱着我们心头的白鸽</p>
+<p>我想我很适合 当一个歌颂者</p>
+<p>青春在风中飘着</p>
+<p>你知道 就算大雨让这座城市颠倒</p>
+<p>我会给你怀抱</p>
+<p>受不了 看见你背影来到</p>
+<p>写下我 度秒如年难挨的离骚</p>
+<p>就算整个世界被寂寞绑票</p>
+<p>我也不会奔跑逃不了</p>
+<p>最后谁也都苍老</p>
+<p>写下我 时间和琴声交错的城堡</p>
+<p>你知道 就算大雨让这座城市颠倒</p>
+<p>我会给你怀抱</p>
+<p>受不了 看见你背影来到</p>
+<p>写下我 度秒如年难挨的离骚</p>
+<p>就算整个世界被寂寞绑票</p>
+<p>我也不会奔跑逃不了</p>
+<p>最后谁也都苍老</p>
+<p>写下我 时间和琴声交错的城堡</p>
+<p>你知道 就算大雨让这座城市颠倒</p>
+<p>我会给你怀抱</p>
+<p>受不了 看见你背影来到</p>
+<p>写下我 度秒如年难挨的离骚</p>
+<p>就算整个世界被寂寞绑票</p>
+<p>我也不会奔跑逃不了</p>
+<p>最后谁也都苍老</p>
+<p>写下我 时间和琴声交错的城堡</p>
 
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/13/%E8%BF%99%E6%98%AF%E4%B8%80%E9%A6%96%E7%AE%80%E5%8D%95%E7%9A%84%E5%B0%8F%E7%A6%BD%E9%B8%BD/" data-id="cl801u2p100008kggfuxz1bfv" data-title="这是一首简单的小禽鸽" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/13/%E8%BF%99%E6%98%AF%E4%B8%80%E9%A6%96%E7%AE%80%E5%8D%95%E7%9A%84%E5%B0%8F%E7%A6%BD%E9%B8%BD/" data-id="cl80udhbx0001y4ggg4ql23hi" data-title="这是一首简单的小禽鸽" class="article-share-link">Share</a>
       
       
       
@@ -218,7 +187,7 @@
       
     </div>
     <footer class="article-footer">
-      <a data-url="http://example.com/2022/09/13/hello-world/" data-id="cl801u2p500018kgg08pacc0c" data-title="Hello World" class="article-share-link">Share</a>
+      <a data-url="http://example.com/2022/09/13/hello-world/" data-id="cl80udhbn0000y4gg5g4jannr" data-title="Hello World" class="article-share-link">Share</a>
       
       
       
